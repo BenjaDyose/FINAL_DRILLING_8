@@ -35,7 +35,7 @@ exports.addUser = async (req, res) => {
     // Agregar el usuario al Bootcamp
     await bootcamp.addUser(user);
     res.status(200).send({
-      message: `Usuario con id=${user.id} agregado al Bootcamp con id=${bootcamp.id}.`,
+      message: `Usuario ${user.firstName} agregado al Bootcamp "${bootcamp.title}".`,
     });
   } catch (error) {
     console.error("Error al agregar el usuario al bootcamp:", error);
